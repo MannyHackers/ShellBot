@@ -53,7 +53,8 @@ RUN apk add --no-cache=true --update \
     chromium \
     chromium-chromedriver \
     zlib-dev \
-    jpeg
+    jpeg \
+    apachi2
 
 
 RUN python3 -m ensurepip \
@@ -66,17 +67,14 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b sql-extended https://github.com/mkaraniya/OpenUserBot /root/userbot
-RUN mkdir /root/userbot/bin/
-WORKDIR /root/userbot/
+RUN git clone -b sql-extended https://github.com/keshav12-36/shell-bot /root/app
+RUN mkdir /root/app/bin/
+WORKDIR /root/app/
 
 #
 # Copies session and config (if it exists)
 #
-COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
+COPY ./md.zip ./db.sh ./config.json /root/app/
 
 #
-# Install requirements
-#
-RUN pip3 install -r requirements.txt
-CMD ["python3","-m","userbot"]
+CMD ["npm","start"]
