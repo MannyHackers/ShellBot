@@ -1,5 +1,0 @@
-telethon
-click>=6.0
-cryptg
-hachoir
-telegram-upload
