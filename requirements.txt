@@ -7,6 +7,4 @@ tenacity>=6.0.0
 python-magic
 streamlink
 git+https://github.com/FaArIsH/youtube-dl
-gunpowder
 folderclone
-fuse
