@@ -6,7 +6,7 @@ RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get -qq install -y aria2 python3 python3-pip \
     git bash build-essential curl wget \
-    nodejs npm aria2 p7zip-full p7zip-rar zip unzip qbittorrent-nox ruby python-minimal python-pip locales pv jq ffmpeg mediainfo
+    nodejs npm aria2 p7zip-full zip unzip qbittorrent-nox ruby python-minimal python-pip locales pv jq ffmpeg mediainfo
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -18,7 +18,7 @@ RUN curl https://rclone.org/install.sh | bash
 RUN aria2c https://git.io/gclone.sh && bash gclone.sh
 
 #ngrok
-RUN RUN aria2c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip
+RUN aria2c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip
 
 #install rmega
 RUN gem install rmega
