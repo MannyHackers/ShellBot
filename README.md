@@ -1,4 +1,4 @@
-# shell-bot
+# Shell-bot ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/MannyHackers/Shell-Bot)
 
 This is a fully functional shellrunner [Telegram bot][]. You tell it a
 command, it executes it and posts the live output. You can send input to the
@@ -94,3 +94,5 @@ node server
 [Telegram bot]: https://core.telegram.org/bots
 [Botgram]: https://botgram.js.org
 [blog post]: https://alba.sh/blog/telegram-shell-bot/
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MannyHackers&layout=compact)](https://github.com/MannyHackers/Shell-Bot)
